@@ -1,4 +1,4 @@
-from distutils.core import setup
+from setuptools import setup
 setup(
   name = 'keycdn',
   packages = ['keycdn'],
@@ -9,5 +9,6 @@ setup(
   url = 'https://github.com/keycdn/python-keycdn-api',
   download_url = 'https://github.com/keycdn/python-keycdn-api/tarball/0.3',
   keywords = ['cdn', 'content delivery network', 'keycdn'],
+  install_requires=['requests'],
   classifiers = [],
 )
