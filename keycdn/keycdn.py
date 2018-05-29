@@ -66,13 +66,13 @@ class Api(object):
         url = '{}/{}'.format(self.__endpoint, call)
         r = None
         if method == 'GET':
-            r = requests.get(url, auth=(self.__api_key, ''), data=params)
+            r = requests.get(url, auth=(self.__api_key, ''), json=params)
         elif method == 'POST':
-            r = requests.post(url, auth=(self.__api_key, ''), data=params)
+            r = requests.post(url, auth=(self.__api_key, ''), json=params)
         elif method == 'PUT':
-            r = requests.put(url, auth=(self.__api_key, ''), data=params)
+            r = requests.put(url, auth=(self.__api_key, ''), json=params)
         elif method == 'DELETE':
-            r = requests.delete(url, auth=(self.__api_key, ''), data=params)
+            r = requests.delete(url, auth=(self.__api_key, ''), json=params)
         else:
             raise ValueError('Only the methods GET, POST, PUT, DELETE are supported.')
 
